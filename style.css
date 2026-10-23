@@ -1,0 +1,238 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f4f7fb;
+    color: #222;
+}
+
+.pricing-section {
+    min-height: 100vh;
+    padding: 60px 8%;
+}
+
+/* Header */
+
+.pricing-header {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.pricing-header h1 {
+    font-size: 40px;
+    color: #1e3a5f;
+    margin-bottom: 10px;
+}
+
+.pricing-header p {
+    color: #666;
+    margin-bottom: 25px;
+}
+
+/* Billing Toggle */
+
+.billing-toggle {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}
+
+.switch {
+    position: relative;
+    width: 55px;
+    height: 28px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    inset: 0;
+    background: #aaa;
+    border-radius: 30px;
+    transition: 0.3s;
+}
+
+.slider::before {
+    content: "";
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    left: 3px;
+    bottom: 3px;
+    background: white;
+    border-radius: 50%;
+    transition: 0.3s;
+}
+
+.switch input:checked + .slider {
+    background: #1e3a5f;
+}
+
+.switch input:checked + .slider::before {
+    transform: translateX(27px);
+}
+
+.discount {
+    background: #dff5e5;
+    color: #16803c;
+    padding: 5px 9px;
+    border-radius: 15px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+/* Pricing Cards */
+
+.pricing-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.pricing-card {
+    position: relative;
+    background: white;
+    padding: 40px 30px;
+    border-radius: 14px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+/* Required hover effect */
+
+.pricing-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+}
+
+.pricing-card.featured {
+    border: 2px solid #1e3a5f;
+}
+
+.pricing-card h2 {
+    color: #1e3a5f;
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.plan-description {
+    color: #666;
+    min-height: 45px;
+    margin-bottom: 25px;
+}
+
+/* Price */
+
+.price {
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 25px;
+}
+
+.price-value {
+    font-size: 42px;
+    color: #1e3a5f;
+}
+
+.billing-period {
+    font-size: 15px;
+    color: #777;
+    font-weight: normal;
+}
+
+/* Features */
+
+.pricing-card ul {
+    list-style: none;
+    margin-bottom: 30px;
+}
+
+.pricing-card li {
+    padding: 9px 0;
+    border-bottom: 1px solid #eee;
+}
+
+/* Buttons */
+
+.pricing-card button {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    background: #1e3a5f;
+    color: white;
+    border-radius: 7px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: transform 0.2s ease, background 0.3s ease;
+}
+
+.pricing-card button:hover {
+    background: #315d8a;
+    transform: scale(1.03);
+}
+
+/* Badge Ribbons */
+
+.badge {
+    position: absolute;
+    top: 18px;
+    right: -32px;
+    width: 130px;
+    padding: 6px 0;
+    text-align: center;
+    background: #1e3a5f;
+    color: white;
+    font-size: 12px;
+    font-weight: bold;
+    transform: rotate(45deg);
+}
+
+.best-value {
+    background: #16803c;
+}
+
+/* Responsive Design */
+
+@media (max-width: 900px) {
+    .pricing-container {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+
+    .pricing-card:hover {
+        transform: translateY(-5px);
+    }
+}
+
+@media (max-width: 500px) {
+    .pricing-section {
+        padding: 40px 18px;
+    }
+
+    .pricing-header h1 {
+        font-size: 31px;
+    }
+
+    .billing-toggle {
+        flex-wrap: wrap;
+    }
+
+    .pricing-card {
+        padding: 35px 22px;
+    }
+}

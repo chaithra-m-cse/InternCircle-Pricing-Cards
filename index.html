@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Plans</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <main class="pricing-section">
+
+        <header class="pricing-header">
+            <h1>Choose Your Plan</h1>
+            <p>Simple pricing plans designed for everyone.</p>
+
+            <!-- Billing Toggle -->
+            <div class="billing-toggle">
+                <span>Monthly</span>
+
+                <label class="switch">
+                    <input type="checkbox" id="billingToggle">
+                    <span class="slider"></span>
+                </label>
+
+                <span>Yearly</span>
+                <span class="discount">Save 20%</span>
+            </div>
+        </header>
+
+
+        <section class="pricing-container">
+
+            <!-- Basic Plan -->
+            <article class="pricing-card">
+                <h2>Basic</h2>
+
+                <p class="plan-description">
+                    Perfect for individuals getting started.
+                </p>
+
+                <div class="price">
+                    ₹<span class="price-value"
+                        data-monthly="299"
+                        data-yearly="2870">299</span>
+                    <span class="billing-period">/month</span>
+                </div>
+
+                <ul>
+                    <li>✓ 5 Projects</li>
+                    <li>✓ Basic Analytics</li>
+                    <li>✓ Email Support</li>
+                    <li>✓ 1 User</li>
+                </ul>
+
+                <button>Choose Basic</button>
+            </article>
+
+
+            <!-- Professional Plan -->
+            <article class="pricing-card featured">
+
+                <span class="badge">Popular</span>
+
+                <h2>Professional</h2>
+
+                <p class="plan-description">
+                    Best for developers and growing teams.
+                </p>
+
+                <div class="price">
+                    ₹<span class="price-value"
+                        data-monthly="599"
+                        data-yearly="5750">599</span>
+                    <span class="billing-period">/month</span>
+                </div>
+
+                <ul>
+                    <li>✓ Unlimited Projects</li>
+                    <li>✓ Advanced Analytics</li>
+                    <li>✓ Priority Support</li>
+                    <li>✓ 5 Users</li>
+                </ul>
+
+                <button>Choose Professional</button>
+            </article>
+
+
+            <!-- Business Plan -->
+            <article class="pricing-card">
+
+                <span class="badge best-value">Best Value</span>
+
+                <h2>Business</h2>
+
+                <p class="plan-description">
+                    Built for larger teams and businesses.
+                </p>
+
+                <div class="price">
+                    ₹<span class="price-value"
+                        data-monthly="999"
+                        data-yearly="9590">999</span>
+                    <span class="billing-period">/month</span>
+                </div>
+
+                <ul>
+                    <li>✓ Unlimited Projects</li>
+                    <li>✓ Premium Analytics</li>
+                    <li>✓ 24/7 Support</li>
+                    <li>✓ Unlimited Users</li>
+                </ul>
+
+                <button>Choose Business</button>
+            </article>
+
+        </section>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
